@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/29 13:32:00 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/07/29 17:19:16 by anhigo-s         ###   ########.fr       */
+/*   Created: 2021/07/29 22:39:39 by anhigo-s          #+#    #+#             */
+/*   Updated: 2021/07/29 22:39:40 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*d0;
-	unsigned char	*s0;
+	unsigned char	*mem1;
+	unsigned char	*mem2;
 
-	d0 = dst;
-	s0 = (unsigned char *)src;
-	if (d0 <= s0)
+	mem1 = (unsigned char *)s1;
+	mem2 = (unsigned char *)s2;
+	while (n--)
 	{
-		return (ft_memcpy (dst, src, len));
-	}
-	else
-	{
-		while (len--)
+		if (mem1[n] != mem2[n])
 		{
-			d0[len] = s0[len];
+			return (mem1[n] - mem2[n]);
 		}
-		return (d0);
 	}
+	return (0);
 }
