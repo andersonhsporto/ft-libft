@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:07:19 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/07/28 23:20:28 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/07/30 21:00:01 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (c == '\0')
 		return ((char *)s + i);
-	return (NULL);
+	return (0);
 }
