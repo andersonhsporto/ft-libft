@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 20:16:08 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/04 20:16:09 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/08/05 17:42:01 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	len;
 	size_t	i;
 
+	if (s == 0)
+		return (0);
 	len = ft_strlen(s);
 	string = (char *)malloc(len + 1);
 	i = 0;
-	if (s == 0 || string == 0)
+	if (string == 0)
 		return (0);
 	while (i < len)
 	{

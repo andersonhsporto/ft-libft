@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 16:55:22 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/04 16:55:32 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/08/05 14:50:20 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ char	*ft_itoa(int n)
 	}
 	len = len + ft_decimal(n);
 	str = malloc((len + 1));
+	if (str == 0)
+		return (0);
 	str[len] = '\0';
 	while (num > 0)
 	{

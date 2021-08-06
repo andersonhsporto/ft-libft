@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 23:17:38 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/04 23:17:59 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/08/05 15:33:53 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (s == 0)
+		return ;
 	write(fd, s, ft_strlen(s));
 }

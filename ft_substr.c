@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 16:25:56 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/03 21:11:44 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/08/05 19:36:40 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,15 @@ static size_t	check(const char *s, unsigned int start, size_t len)
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
 	char	*substr;
-	
-	j = check(s, start, len);
-	substr = malloc(j);
-	i = 0;
-	if (substr == 0 || s == 0)
+
+	if (s == 0)
 		return (0);
-	while (len-- && (s[start + i] != '\0') && ((start + i) < ft_strlen(s)))
+	substr = malloc(check(s, start, len));
+	i = 0;
+	if (substr == 0)
+		return (0);
+	while ((len--) && (s[start + i] != '\0') && ((start + i) < ft_strlen(s)))
 	{
 		substr[i] = s[start + i];
 		i++;
