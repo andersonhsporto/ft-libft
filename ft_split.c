@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 18:43:54 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/06 18:43:55 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/08/06 20:23:02 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,23 @@
 
 static	size_t	ft_count(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
+	size_t	check;
+	size_t	words;
 
-	i = 0;
-	j = 1;
-	while (s[i] != '\0')
+	check = 1;
+	words = 0;
+	while (*s)
 	{
-		if (s[i] == c)
+		if (*s == c)
+			check = 1;
+		else if (check == 1)
 		{
-			j++;
+			check = 0;
+			words++;
 		}
-		i++;
+		s++;
 	}
-	return (j);
+	return (words);
 }
 
 static size_t	ft_wordlen(char const *s, char c)
@@ -52,13 +55,16 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	k = 0;
+	if (s == 0)
+		return (0);
 	array = malloc((ft_count(s, c) + 1) * sizeof(char *));
+	if (array == 0)
+		return (0);
 	while (s[i] != '\0')
 	{
 		if (s[i] != c)
 		{
 			array[j] = ft_substr(s, i, ft_wordlen(&s[i], c));
-			free(ft_substr(s, i, ft_wordlen(&s[i], c)));
 			i = (i + ft_wordlen(&s[i], c) - 1);
 			j++;
 		}
@@ -67,3 +73,4 @@ char	**ft_split(char const *s, char c)
 	array[j] = 0;
 	return (array);
 }
+
