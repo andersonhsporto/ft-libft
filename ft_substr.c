@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 16:25:56 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/05 19:36:40 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/08/08 18:18:41 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s == 0)
 		return (0);
-	substr = malloc(check(s, start, len));
+	substr = malloc((check(s, start, len)) * sizeof(char));
 	i = 0;
 	if (substr == 0)
 		return (0);

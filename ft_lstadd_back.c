@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/29 13:32:00 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/08 15:26:21 by anhigo-s         ###   ########.fr       */
+/*   Created: 2021/08/08 15:30:23 by anhigo-s          #+#    #+#             */
+/*   Updated: 2021/08/08 15:30:24 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	unsigned char	*dest;
-	unsigned char	*source;
+	t_list	*i;
 
-	dest = dst;
-	source = (unsigned char *)src;
-	if (dest <= source)
+	if (*lst)
 	{
-		return (ft_memcpy (dst, src, len));
+		i = ft_lstlast(*lst);
+		i->next = new;
 	}
 	else
 	{
-		while (len--)
-		{
-			dest[len] = source[len];
-		}
-		return (dest);
+		*lst = new;
 	}
 }
