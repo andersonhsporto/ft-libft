@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 16:25:56 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/08 18:18:41 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/08/10 19:31:49 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,23 @@
 static size_t	check(const char *s, unsigned int start, size_t len)
 {
 	size_t	s_len;
-	size_t	malloc;
+	size_t	size;
 
 	s_len = ft_strlen(s);
-	malloc = 0;
+	size = 0;
 	if (start > s_len)
 	{
-		malloc = 1;
+		size = 1;
 	}
 	else if (start + len > s_len)
 	{
-		malloc = s_len - start + 1;
+		size = s_len - start + 1;
 	}
 	else
 	{
-		malloc = len + 1;
+		size = len + 1;
 	}
-	return (malloc);
+	return (size);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
