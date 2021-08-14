@@ -1,4 +1,5 @@
 # Libft
+C library regrouping usual functions
 ---
 ### Part 1 - Libc functions
 
