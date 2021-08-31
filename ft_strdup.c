@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 01:15:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/10 18:32:20 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/08/31 13:34:49 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*string;
+	char	*new;
+	char	*res;
+	ssize_t	i;
 
-	string = malloc(ft_strlen(s1) + 1);
-	if (string == 0)
-	{
-		return (0);
-	}
-	else
-	{
-		ft_memcpy (string, s1, ft_strlen (s1) + 1);
-	}
-	return (string);
+	i = 0;
+	while ((s[i] != '\0'))
+		i++;
+	res = malloc(i + 1);
+	new = res;
+	while (*s)
+		*new++ = *s++;
+	*new = 0;
+	return (res);
 }
