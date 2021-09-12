@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 01:15:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/31 13:34:49 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/08/24 22:20:16 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,20 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*new;
-	char	*res;
-	ssize_t	i;
+	char	*string;
+	size_t	i;
 
-	i = 0;
-	while ((s[i] != '\0'))
-		i++;
-	res = malloc(i + 1);
-	new = res;
-	while (*s)
-		*new++ = *s++;
-	*new = 0;
-	return (res);
+	string = malloc(ft_strlen(s1) + 1);
+	if (string == 0)
+		return (0);
+	else
+	{
+		i = 0;
+		while (i < (ft_strlen (s1) + 1))
+		{
+			string[i] = s1[i];
+			i++;
+		}
+	}
+	return (string);
 }

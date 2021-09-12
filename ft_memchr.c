@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 18:50:13 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/11 21:55:23 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/08/31 13:30:00 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (&mem[i]);
 		}
 		i++;
-	}	
+	}
 	return (0);
 }
