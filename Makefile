@@ -19,7 +19,7 @@ BONUS_OBJ := $(BONUS_SRC:%.c=%.o)
 
 all:	$(NAME)
 
-$(NAME):	$(OBJ)	
+$(NAME):	$(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
 bonus:
@@ -27,11 +27,10 @@ bonus:
 	ar -rcs $(NAME) $(BONUS_OBJ)
 
 clean:
-	rm -rf *.o
+	rm -rf $(OBJ) $(BONUS_SRC)
 	rm -rf ./a.out
 
 fclean:	clean
 	rm -rf $(NAME)
 
 re:	fclean all
-
