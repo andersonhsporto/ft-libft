@@ -9,7 +9,7 @@ ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 NAME = libft.a
 
-CC = gcc
+CC = clang
 
 CFLAGS = -Wall -Werror -Wextra
 
