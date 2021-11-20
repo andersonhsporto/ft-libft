@@ -23,7 +23,7 @@ all:	$(NAME)
 $(NAME):	$(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
-bonus:
+bonus:all
 	$(CC) $(CFLAGS) -c $(BONUS_SRC)
 	ar -rcs $(NAME) $(BONUS_OBJ)
 
