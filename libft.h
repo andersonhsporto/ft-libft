@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/12/08 18:27:40 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/12/08 18:30:37 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -219,8 +219,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 /*
 *	@brief Iterates the list ’lst’ and applies the function
 *	’f’ to the content of each element.
-*	@param lst The adress of a pointer to an element.
-*	@param f The adress of the function used to iterate on the list.
+*	@param lst The address of a pointer to an element.
+*	@param f The address of the function used to iterate on the list.
 *	@return void
 */
 void	ft_lstiter(t_list *lst, void (*f)(void *));
@@ -230,9 +230,9 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 *	list resulting of the successive applications of
 *	the function ’f’. The ’del’ function is used to
 *	delete the content of an element if needed.
-*	@param lst The adress of a pointer to an elemen.
-*	@param f The adress of the function used to iterate on the list.
-*	@param del The adress of the function used to delete the
+*	@param lst The address of a pointer to an element.
+*	@param f The address of the function used to iterate on the list.
+*	@param del The address of the function used to delete the
 *	content of an element if needed.
 *	@return The new list. NULL if the allocation fails.
 */
