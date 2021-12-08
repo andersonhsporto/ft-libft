@@ -247,14 +247,13 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 */
 char	*ft_strtjoin(char *string0, char *string1, char *string2);
 /*
-*	@brief function  compares the two strings s1 and s2.
-*	The locale is not taken into account.
-*	The comparison is done using unsigned characters.
-*	@param s1 The first string to compare.
-*	@param s2 The second str to compare.
-*	@return Integer less than, equal to, or greater than zero if s1
-*	(or the first n bytes thereof) is found,  respectively, to be less
-*	than, to match, or be greater than s2.
+*	@brief Allocates (with malloc(3)) and returns a new string,
+*	which is the result of the concatenation of ’string0’, 
+*	’string1’ and ’string2’.
+*	@param string0 The prefix string.
+*	@param string1 The middle string.
+*	@param string2 The suffix string.
+*	@return The new string. NULL if the allocation fails.
 */
 int		ft_strcmp(const char *s1, const char *s2);
 #endif
