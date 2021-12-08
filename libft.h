@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/12/08 18:16:42 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2021/12/08 18:27:40 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -248,7 +248,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 char	*ft_strtjoin(char *string0, char *string1, char *string2);
 /*
 *	@brief Allocates (with malloc(3)) and returns a new string,
-*	which is the result of the concatenation of ’string0’, 
+*	which is the result of the concatenation of ’string0’,
 *	’string1’ and ’string2’.
 *	@param string0 The prefix string.
 *	@param string1 The middle string.
@@ -256,4 +256,14 @@ char	*ft_strtjoin(char *string0, char *string1, char *string2);
 *	@return The new string. NULL if the allocation fails.
 */
 int		ft_strcmp(const char *s1, const char *s2);
+/*
+*	@brief compares  the two strings s1 and s2.
+*	The locale is not taken into account.
+*	The comparison is done using unsigned characters..
+*	@param s1 The first string.
+*	@param s2 The second string.
+*	@return The strcmp() and strncmp() functions return an integer less than,
+*	equal to, or greater than zero if s1 (or the first n bytes thereof)
+*	is found,  respectively, to be less than, to match, or be greater than s2.
+*/
 #endif
