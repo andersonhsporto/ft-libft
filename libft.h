@@ -257,9 +257,9 @@ char	*ft_strtjoin(char *string0, char *string1, char *string2);
 */
 int		ft_strcmp(const char *s1, const char *s2);
 /*
-*	@brief compares  the two strings s1 and s2.
+*	@brief Compares  the two strings s1 and s2.
 *	The locale is not taken into account.
-*	The comparison is done using unsigned characters..
+*	The comparison is done using unsigned characters.
 *	@param s1 The first string.
 *	@param s2 The second string.
 *	@return The strcmp() and strncmp() functions return an integer less than,
