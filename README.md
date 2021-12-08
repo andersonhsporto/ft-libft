@@ -97,6 +97,6 @@ C library regrouping usual functions
 
 ### Extra Functions
 
-* > [ft_strtjoin](/ft_strtjoin.c) `(char	*ft_strtjoin(char *string0, char *string1, char *string2)` Allocates (with malloc) and returns a new string, which is the result of the concatenation of ’string1’,’string2’ and  ’string3’.
+* > [ft_strtjoin](/ft_strtjoin.c) `(char	*ft_strtjoin(char *string0, char *string1, char *string2))` Allocates (with malloc) and returns a new string, which is the result of the concatenation of ’string1’,’string2’ and ’string3’.
 
 * Aditional information - [Linux Programmer's Manual](http://man7.org/) 
