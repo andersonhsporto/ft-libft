@@ -23,9 +23,11 @@ all:	$(NAME)
 $(NAME):	$(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
-bonus:all
-	$(CC) $(CFLAGS) -c $(BONUS_SRC)
+$(BONUS_NAME):	$(BONUS_OBJ)
 	ar -rcs $(NAME) $(BONUS_OBJ)
+
+bonus:$(BONUS_OBJ)
+
 
 clean:
 	rm -rf $(OBJ) $(BONUS_OBJ)
