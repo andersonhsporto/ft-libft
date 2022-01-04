@@ -258,4 +258,6 @@ char	*ft_strtjoin(char *string0, char *string1, char *string2);
 *	is found,  respectively, to be less than, to match, or be greater than s2.
 */
 int		ft_strcmp(const char *s1, const char *s2);
+
+int	ft_isspace(int c);
 #endif
