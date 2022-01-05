@@ -6,23 +6,11 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 14:55:49 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/09/01 02:17:03 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2022/01/05 00:00:54 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_isspace(int c)
-{
-	if ((c >= 9 && c <= 13) || c == ' ')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
-}
 
 int	ft_atoi(const char *str)
 {
