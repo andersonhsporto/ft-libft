@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/12/08 18:31:45 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2022/01/05 00:07:25 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -259,5 +259,5 @@ char	*ft_strtjoin(char *string0, char *string1, char *string2);
 */
 int		ft_strcmp(const char *s1, const char *s2);
 
-int	ft_isspace(int c);
+int		ft_isspace(int c);
 #endif
