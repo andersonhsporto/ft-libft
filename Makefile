@@ -28,7 +28,6 @@ $(BONUS_NAME):	$(BONUS_OBJ)
 
 bonus:$(BONUS_OBJ)
 
-
 clean:
 	rm -rf $(OBJ) $(BONUS_OBJ)
 	rm -rf ./a.out
