@@ -56,6 +56,6 @@ Mkfile.old
 dkms.conf
 
 #Temp files and folders
-minishell
+libft.a
 .vscode/
 *.json

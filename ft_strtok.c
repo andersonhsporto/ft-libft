@@ -6,11 +6,12 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 00:34:23 by anhigo-s          #+#    #+#             */
-/*   Updated: 2022/02/12 00:43:11 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2022/02/12 01:20:15 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	strlen_char(const char *string, char c);
 
@@ -21,7 +22,9 @@ char	*ft_strtok(char *input, char d)
 
 	if (input == NULL)
 		return (NULL);
-	result = (char *)malloc(sizeof(char) * strlen_char(input, d));
+	if (!ft_strchr(input, d))
+		return (NULL);
+	result = (char *)malloc(sizeof(char) * (strlen_char(input, d) + 1));
 	i = strlen_char(input, d) - 1;
 	while (i > -1)
 	{
