@@ -260,4 +260,5 @@ char	*ft_strtjoin(char *string0, char *string1, char *string2);
 int		ft_strcmp(const char *s1, const char *s2);
 
 int		ft_isspace(int c);
+char		*ft_strtok(char *input, char d);
 #endif
