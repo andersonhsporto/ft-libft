@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2022/02/12 00:42:07 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2022/03/17 13:45:53 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -261,4 +261,6 @@ int		ft_strcmp(const char *s1, const char *s2);
 
 int		ft_isspace(int c);
 char	*ft_strtok(char *input, char d);
+
+char	*get_next_line(int fd);
 #endif
