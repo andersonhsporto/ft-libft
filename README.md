@@ -97,7 +97,7 @@ C library regrouping usual functions
 
 ### Extra Functions
 
-* > [ft_strtjoin](/ft_strtjoin.c) `(char	*ft_strtjoin(char *string0, char *string1, char *string2))` Allocates (with malloc) and returns a new string, which is the result of the concatenation of ’string1’, ’string2’ and ’string3’.
+* > [ft_strtjoin](/ft_strtjoin.c) `(char	*ft_strtjoin(char *string0, char *string1, char *string2))` Allocates (with malloc) and returns a new string, which is the result of the concatenation of ’string0’, ’string1’ and ’strin2’.
 
 * > [ft_strcmp](/ft_strcmp.c) `(int       ft_strcmp(const char *s1, const char *s2))` Compares the two strings s1 and s2. The locale is not taken into account.
 The comparison is done using unsigned characters.
