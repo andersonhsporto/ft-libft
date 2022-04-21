@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2022/04/21 01:03:04 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2022/04/21 01:13:35 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,7 @@ int		ft_isalnum(int c);
 *	@param c The character to check.
 *	@return 1 if c is alphabetic, 0 otherwise.
 */
-int		ft_isalpha(int c);
-
-/*
-*	@brief Checks  whether  c is a 7-bit unsigned char value that fits into
-*	the ASCII character set.
-*	@param c The character to check.
+int		ft_isalpha(int c);str
 *	@return 1 if c is an ASCII character, 0 otherwise.
 */
 int		ft_isascii(int c);
@@ -245,14 +240,79 @@ void	ft_putendl_fd(char *s, int fd);
 */
 void	ft_putnbr_fd(int n, int fd);
 
+/*
+*	@brief Locate a substring in a string.
+*	@param haystack The string to search in.
+*	@param needle The string to search for.
+*	@param len The length of the string to search for.
+*	@return The index of the first occurrence of the substring in the string,
+*	or -1 if the substring is not found.
+*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
+/*
+*	@brief Fill memory with a constant byte.
+*	@param s The memory to fill.
+*	@param c The byte to fill the memory with.
+*	@param n The size of the memory to fill.
+*	@return void
+*/
 void	*ft_memset(void *s, int c, size_t n);
+
+/*
+*	@brief Allocate (with malloc(3)) and set to 0
+*	a memory area of size n bytes.
+*	@param n The size of the memory to allocate.
+*	@return The allocated memory. NULL if the allocation fails.
+*/
 void	*ft_calloc(size_t count, size_t size);
+
+/*
+*	@brief Scan the initial n bytes of the memory area pointed to
+*	by s for the first ’c’ byte.
+*	@param s The memory area to scan.
+*	@param c The byte to search for.
+*	@param n The size of the memory area to scan.
+*	@return The index of the first occurrence of the byte in the memory area,
+*	or -1 if the byte is not found.
+*/
 void	*ft_memchr(const void *s, int c, size_t n);
+
+/*
+*	@brief Copy memory area.
+*	@param dst The memory area to copy to.
+*	@param src The memory area to copy from.
+*	@param n The size of the memory area to copy.
+*	@return void
+*/
 void	*ft_memcpy(void *dst, const void *src, size_t n);
+
+/*
+*	@brief Copy memory area.
+*	@param dest The memory area to copy to.
+*	@param src The memory area to copy from.
+*	@param c The byte to search for.
+*	@param n The size of the memory area to copy.
+*	@return void
+*/
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
+
+/*
+*	@brief Copies n bytes from memory area src to memory area dest.
+*	@param dest The memory area to copy to.
+*	@param src The memory area to copy from.
+*	@param n The size of the memory area to copy.
+*	@return void
+*/
 void	*ft_memmove(void *dest, const void *src, size_t n);
+
+/*
+*	@brief Erases the data in the n bytes of the memory stating at the location
+*	pointed to by s.
+*	@param s The memory area to erase.
+*	@param n The size of the memory area to erase.
+*	@return void
+*/
 void	ft_bzero(void *s, size_t n);
 
 /*
@@ -277,9 +337,17 @@ size_t	ft_strlen(const char *s);
 */
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
+
+/*
+*	@brief Copy and concatenate strings respectively. The resulting
+*	string is always null-terminated.
+*	@param dst The string to copy to.
+*	@param src The string to copy from.
+*	@param size The total number of bytes in dst.
+*	@return The length of the string it tried to create.
+*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
-size_t	ft_strclen(const char *s, int c);
 
 /*
 *	@brief Allocates (with malloc(3)) and returns a new
@@ -389,8 +457,22 @@ char	*ft_strtjoin(char *string0, char *string1, char *string2);
 */
 int		ft_strcmp(const char *s1, const char *s2);
 
+/*
+*	@brief Check for white-space characters. In the "C" locale, these are:
+*	space, form-feed ('\f'), newline ('\n'), carriage return ('\r'),
+*	horizontal tab ('\t'), and vertical tab ('\v').
+*	@param c The character to check.
+*	@return 1 if the character is a white-space character, 0 otherwise.
+*/
 int		ft_isspace(int c);
 
+/*
+*	@brief Breaks a string into after the first occurrence of the
+*	delimiter.
+*	@param input The string to break.
+*	@param d The delimiter.
+*	@return The string after the delimiter.
+*/
 char	*ft_strtok(char *input, char d);
 
 /*
