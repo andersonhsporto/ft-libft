@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2022/04/21 01:15:32 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2022/04/21 01:17:28 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
+
+# define BUFFER_SIZE 100
 
 typedef struct s_list
 {
@@ -104,6 +106,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 *	@param s2 The second string to compare.
 *	@param n The number of characters to compare.
 *	@return 0 if the strings are equal, 1 if s1 is greater than s2, -1 if s1
+*	is less than s2.
+*/
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /*
