@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2022/04/21 01:13:35 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2022/04/21 01:15:32 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,11 @@ int		ft_isalnum(int c);
 *	@param c The character to check.
 *	@return 1 if c is alphabetic, 0 otherwise.
 */
-int		ft_isalpha(int c);str
+int		ft_isalpha(int c);
+
+/*
+*	@brief checks whether c is a 7-bit unsigned char value that
+*	fits into the ASCII character set.
 *	@return 1 if c is an ASCII character, 0 otherwise.
 */
 int		ft_isascii(int c);
@@ -337,7 +341,6 @@ size_t	ft_strlen(const char *s);
 */
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
-
 /*
 *	@brief Copy and concatenate strings respectively. The resulting
 *	string is always null-terminated.
@@ -347,7 +350,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 *	@return The length of the string it tried to create.
 */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-
 
 /*
 *	@brief Allocates (with malloc(3)) and returns a new
