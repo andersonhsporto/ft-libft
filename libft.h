@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2022/04/19 00:49:54 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2022/04/21 01:03:04 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,119 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+/*
+*	@brief Checks for an alphanumeric character; it is equivalent to
+*	(isalpha(c) || isdigit(c)).
+*	@param c The character to check.
+*	@return 1 if c is alphanumeric, 0 otherwise.
+*/
 int		ft_isalnum(int c);
+
+/*
+*	@brief Checks for an alphabetic character; in the standard C locale,
+*	it  is  equivalent  to  (isupper(c) || islower(c)).
+*	@param c The character to check.
+*	@return 1 if c is alphabetic, 0 otherwise.
+*/
 int		ft_isalpha(int c);
+
+/*
+*	@brief Checks  whether  c is a 7-bit unsigned char value that fits into
+*	the ASCII character set.
+*	@param c The character to check.
+*	@return 1 if c is an ASCII character, 0 otherwise.
+*/
 int		ft_isascii(int c);
+
+/*
+*	@brief Checks for a digit (0 through 9).
+*	@param c The character to check.
+*	@return 1 if c is a digit, 0 otherwise.
+*/
 int		ft_isdigit(int c);
+
+/*
+*	@brief Checks for any printable character including space.
+*	@param c The character to check.
+*	@return 1 if c is a printable character, 0 otherwise.
+*/
 int		ft_isprint(int c);
+
+/*
+*	@brief If  c  is a lowercase letter, toupper() returns its
+*	uppercase equivalent, if an uppercase representation exists in the
+*	current locale.  Otherwise, it returns c.
+*	@param c The character to convert.
+*	@return The uppercase equivalent of c.
+*/
 int		ft_tolower(int c);
+
+/*
+*	@brief If  c  If  c  is an uppercase letter, tolower() returns its
+*	lowercase equivalent, if a lowercase representation exists in the
+*	current locale.  Otherwise, it returns c.
+*	@param c The character to convert.
+*	@return The lowercase equivalent of c.
+*/
 int		ft_toupper(int c);
-int		ft_puts(const char *s);
+
+/*
+*	@brief Convert the initial portion of the string pointed to by str to int
+*	@param str The string to convert.
+*	@return The converted value or 0 on error.
+*/
 int		ft_atoi(const char *str);
+
+/*
+*	@brief Compares the two strings s1 and s2.
+*	locale is not taken into account.
+*	The comparison is done using unsigned characters.
+*	@param s1 The first string to compare.
+*	@param s2 The second string to compare.
+*	@param n The number of characters to compare.
+*	@return 0 if the strings are equal, 1 if s1 is greater than s2, -1 if s1
+*	is less than s2.
+*/
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
+/*
+*	@brief Ccompares the first n bytes (each interpreted as unsigned char)
+*	of the memory areas s1 and s2.
+*	locale is not taken into account.
+*	The comparison is done using unsigned characters.
+*	@param s1 The first string to compare.
+*	@param s2 The second string to compare.
+*	@param n The number of characters to compare.
+*	@return 0 if the strings are equal, 1 if s1 is greater than s2, -1 if s1
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+/*
+*	@brief Returns a pointer to a new string which is a duplicate of the string.
+*	Memory for the new string is obtained with malloc(3),
+*	and can be freed with free(3).
+*	@param str The string to duplicate.
+*	@return Pointer to the duplicated string, or NULL if the allocation failed.
+*/
 char	*ft_strdup(const char *s1);
+
+/*
+*	@brief returns a pointer to the first occurrence of the
+*	character c in the string s.
+*	@param s The string to search.
+*	@param c The character to search for.
+*	@return Pointer to the first occurrence of c, or NULL if c is not found.
+*/
 char	*ft_strchr(const char *s, int c);
+
+/*
+*	@brief returns a pointer to the last occurrence of the
+*	character c in the string s.
+*	@param s The string to search.
+*	@param c The character to search for.
+*	@return Pointer to the last occurrence of c, or NULL if c is not found.
+*/
 char	*ft_strrchr(const char *s, int c);
+
 /*
 *	@brief Allocates (with malloc(3)) and returns a substring
 *	from the string ’s’.
@@ -45,6 +144,7 @@ char	*ft_strrchr(const char *s, int c);
 *	@return The substring, NULL if the allocation fails.
 */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
 /*
 *	@brief Allocates (with malloc(3)) and returns a new string,
 *	which is the result of the concatenation of ’s1’ and ’s2’.
@@ -53,6 +153,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 *	@return The new string. NULL if the allocation fails.
 */
 char	*ft_strjoin(char const *s1, char const *s2);
+
 /*
 *	@brief Allocates (with malloc(3)) and returns a copy of ’s1’
 *	with the characters specified in ’set’ removed from the
@@ -62,6 +163,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 *	@return The trimmed string. NULL if the allocation fails.
 */
 char	*ft_strtrim(char const *s1, char const *set);
+
 /*
 *	@brief Allocates (with malloc(3)) and returns an array
 *	of strings obtained by splitting ’s’ using the
@@ -73,6 +175,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 *	NULL if the allocation fails.
 */
 char	**ft_split(char const *s, char c);
+
 /*
 *	@brief Allocates (with malloc(3)) and returns a string
 *	representing the integer received as an argument.
@@ -82,6 +185,7 @@ char	**ft_split(char const *s, char c);
 *	allocation fails.
 */
 char	*ft_itoa(int n);
+
 /*
 *	@brief Applies the function ’f’ to each character of
 *	the string ’s’ , and passing its index as first
@@ -93,6 +197,7 @@ char	*ft_itoa(int n);
 *	of ’f’. Returns NULL if the allocation fails.
 */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
 /*
 *	@brief Applies the function f to each character of the
 *	string passed as argument, and passing its index
@@ -103,6 +208,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 *	@return void
 */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
 /*
 *	@brief Outputs the character ’c’ (with write(3)) to the given file
 *	descriptor.
@@ -111,6 +217,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 *	@return void
 */
 void	ft_putchar_fd(char c, int fd);
+
 /*
 *	@brief Outputs the string ’s’ (with write(3)) to the given file
 *	descriptor.
@@ -119,6 +226,7 @@ void	ft_putchar_fd(char c, int fd);
 *	@return void
 */
 void	ft_putstr_fd(char *s, int fd);
+
 /*
 *	@brief Outputs the string ’s’ (with write(3)) to the given file
 *	descriptor, followed by a newline.
@@ -147,7 +255,13 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	ft_bzero(void *s, size_t n);
 
+/*
+*	@brief calculates the length of the string ’s’.
+*	@param s The string to calculate the length of.
+*	@return The length of the string.
+*/
 size_t	ft_strlen(const char *s);
+
 /*
 *	@brief Appends string src to the end of dst. It will append at most
 *	dstsize - strlen(dst) - 1 characters. It will then NUL-terminate,
@@ -162,8 +276,11 @@ size_t	ft_strlen(const char *s);
 *	tried to create.
 */
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+
 size_t	ft_strclen(const char *s, int c);
+
 /*
 *	@brief Allocates (with malloc(3)) and returns a new
 *	element. The variable ’content’ is initialized
@@ -173,6 +290,7 @@ size_t	ft_strclen(const char *s, int c);
 *	@return The new element.
 */
 t_list	*ft_lstnew(void *content);
+
 /*
 *	@brief Adds the element ’new’ at the beginning of the list.
 *	@param lst The address of a pointer to the first link of a list.
@@ -180,18 +298,21 @@ t_list	*ft_lstnew(void *content);
 *	@return void
 */
 void	ft_lstadd_front(t_list **lst, t_list *new);
+
 /*
 *	@brief Counts the number of elements in a list.
 *	@param lst The beginning of the list.
 *	@return Length of the list.
 */
 int		ft_lstsize(t_list *lst);
+
 /*
 *	@brief Returns the last element of the list.
 *	@param lst The beginning of the list.
 *	@return Last element of the list.
 */
 t_list	*ft_lstlast(t_list *lst);
+
 /*
 *	@brief Adds the element ’new’ at the end of the list.
 *	@param lst The address of a pointer to the first link of a list.
@@ -199,6 +320,7 @@ t_list	*ft_lstlast(t_list *lst);
 *	@return void
 */
 void	ft_lstadd_back(t_list **lst, t_list *new);
+
 /*
 *	@brief Takes as a parameter an element and frees (with free(3)) the
 *	memory of the element’s content using the function
@@ -209,6 +331,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 *	@return void
 */
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
+
 /*
 *	@brief Deletes and frees the given element and every
 *	successor of that element, using the function ’del’ and free(3).
@@ -219,6 +342,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 *	@return void
 */
 void	ft_lstclear(t_list **lst, void (*del)(void *));
+
 /*
 *	@brief Iterates the list ’lst’ and applies the function
 *	’f’ to the content of each element.
@@ -227,6 +351,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 *	@return void
 */
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+
 /*
 *	@brief Iterates the list ’lst’ and applies the function
 *	’f’ to the content of each element. Creates a new
@@ -240,6 +365,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 *	@return The new list. NULL if the allocation fails.
 */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
 /*
 *	@brief Allocates (with malloc(3)) and returns a new string,
 *	which is the result of the concatenation of ’string0’,
@@ -250,6 +376,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 *	@return The new string. NULL if the allocation fails.
 */
 char	*ft_strtjoin(char *string0, char *string1, char *string2);
+
 /*
 *	@brief Compares  the two strings s1 and s2.
 *	The locale is not taken into account.
@@ -263,6 +390,7 @@ char	*ft_strtjoin(char *string0, char *string1, char *string2);
 int		ft_strcmp(const char *s1, const char *s2);
 
 int		ft_isspace(int c);
+
 char	*ft_strtok(char *input, char d);
 
 /*
@@ -271,4 +399,5 @@ char	*ft_strtok(char *input, char d);
 *	@return The line read. NULL if the allocation fails.
 */
 char	*get_next_line(int fd);
+
 #endif
