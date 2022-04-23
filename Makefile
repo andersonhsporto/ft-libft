@@ -24,7 +24,7 @@ $(NAME):	$(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
 clean:
-	rm -rf $(OBJ) $(BONUS_OBJ)
+	rm -rf $(OBJ)
 	rm -rf ./a.out
 
 fclean:	clean
