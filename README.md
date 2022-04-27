@@ -97,6 +97,9 @@ C library regrouping usual functions
 
 ### Extra Functions
 
+* > [get_next_line](/get_next_line/get_next_line.c) `(char	*get_next_line(int fd))` Calling  get_next_line in a loop will allow you to read the text
+available on the file descriptor one line at a time until the end of it.
+
 * > [ft_strtjoin](/ft_strtjoin.c) `(char	*ft_strtjoin(char *string0, char *string1, char *string2))` Allocates (with malloc) and returns a new string, which is the result of the concatenation of ’string0’, ’string1’ and ’strin2’.
 
 * > [ft_strcmp](/ft_strcmp.c) `(int       ft_strcmp(const char *s1, const char *s2))` Compares the two strings s1 and s2. The locale is not taken into account.
