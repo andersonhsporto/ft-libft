@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2022/04/21 01:17:28 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2022/04/29 21:15:34 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
+# include <errno.h>
 
 # define BUFFER_SIZE 100
 
