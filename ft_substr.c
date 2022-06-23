@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 16:25:56 by anhigo-s          #+#    #+#             */
-/*   Updated: 2022/04/29 02:32:12 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2022/06/23 12:28:21 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 static size_t	check(const char *s, unsigned int start, size_t len)
 {
-	size_t	s_len;
-	size_t	size;
+	const size_t	s_len = ft_strlen(s);
+	size_t			size;
 
-	s_len = ft_strlen(s);
 	size = 0;
 	if (start > s_len)
 	{
