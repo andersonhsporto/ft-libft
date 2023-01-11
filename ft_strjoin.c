@@ -18,13 +18,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
-	if (s1 == 0)
-		return ((char *)s2);
-	if (s2 == 0)
-		return ((char *)s1);
+	if (!s1)
+		return (ft_strdup(s2));
+	else if (!s2)
+		return (ft_strdup(s1));
 	nstring = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (nstring == 0)
-		return (0);
+	if (!nstring)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s1[i] != '\0')
