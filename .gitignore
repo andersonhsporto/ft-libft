@@ -61,3 +61,4 @@ libft.a
 *.json
 main.c
 libftTester/
+.idea/
