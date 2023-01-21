@@ -6,16 +6,16 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 17:13:55 by anhigo-s          #+#    #+#             */
-/*   Updated: 2023/01/21 00:33:40 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/01/21 00:37:51 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *new_string;
-	size_t size;
+	char	*new_string;
+	size_t	size;
 
 	if (!s1)
 		return (ft_strdup(s2));
