@@ -6,14 +6,14 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 16:25:56 by anhigo-s          #+#    #+#             */
-/*   Updated: 2023/01/21 01:21:10 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/01/21 01:27:45 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static size_t	check(const char *s, unsigned int start, size_t len);
-static char		*start_out_of_bounds(const char *s, unsigned int start);
+static char		*start_out_of_bounds(void);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s == 0)
 		return (0);
 	else if (start > ft_strlen(s))
-		return (start_out_of_bounds(s, start));
+		return (start_out_of_bounds());
 	substr = malloc((check(s, start, len)) * sizeof(char));
 	if (substr == 0)
 		return (0);
@@ -58,7 +58,7 @@ static size_t	check(const char *s, unsigned int start, size_t len)
 	return (size);
 }
 
-static char	*start_out_of_bounds(const char *s, unsigned int start)
+static char	*start_out_of_bounds(void)
 {
 	char	*substr;
 

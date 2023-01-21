@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2023/01/21 00:23:46 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/01/21 00:52:22 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,20 @@
 # include <errno.h>
 
 # define BUFFER_SIZE 100
+# define MAX_INT 2147483647
+# define MIN_INT 2147483648
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+enum e_sign
+{
+	POSITIVE = 1,
+	NEGATIVE = -1
+};
 
 /*
 *	@brief Checks for an alphanumeric character; it is equivalent to
