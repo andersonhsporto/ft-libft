@@ -6,21 +6,21 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/08 15:30:30 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/08 15:30:31 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/01/21 00:23:46 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **list, void (*del)(void *))
 {
 	t_list	*i;
 
-	while (*lst)
+	while (*list)
 	{
-		i = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = i;
+		i = (*list)->next;
+		ft_lstdelone(*list, del);
+		*list = i;
 	}
-	lst = 0;
+	list = 0;
 }

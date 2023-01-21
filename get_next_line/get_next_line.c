@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 00:39:01 by anhigo-s          #+#    #+#             */
-/*   Updated: 2022/03/15 02:50:06 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/01/21 00:33:40 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,29 @@
 
 char	*gnl_strjoinfree(char *s1, char *s2)
 {
-	char	*nstring;
+	char	*new_string;
 	size_t	i;
 	size_t	a;
 
-	nstring = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	new_string = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	i = 0;
 	a = 0;
-	if (nstring == 0)
+	if (new_string == 0)
 		return (0);
 	while (s1[i] != '\0')
 	{
-		nstring[i] = s1[i];
+		new_string[i] = s1[i];
 		i++;
 	}
 	while (s2[a] != '\0')
 	{
-		nstring[i + a] = s2[a];
+		new_string[i + a] = s2[a];
 		a++;
 	}
-	nstring[i + a] = '\0';
+	new_string[i + a] = '\0';
 	free(s1);
 	s1 = NULL;
-	return (nstring);
+	return (new_string);
 }
 
 static char	*get_line(char **buffer_backup, size_t i)

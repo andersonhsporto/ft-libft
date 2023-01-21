@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2022/04/29 21:15:34 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/01/21 00:23:46 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -368,78 +368,78 @@ t_list	*ft_lstnew(void *content);
 
 /*
 *	@brief Adds the element ’new’ at the beginning of the list.
-*	@param lst The address of a pointer to the first link of a list.
+*	@param list The address of a pointer to the first link of a list.
 *	@param new The address of a pointer to the element to be added to the list.
 *	@return void
 */
-void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **list, t_list *new);
 
 /*
 *	@brief Counts the number of elements in a list.
-*	@param lst The beginning of the list.
+*	@param list The beginning of the list.
 *	@return Length of the list.
 */
-int		ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *list);
 
 /*
 *	@brief Returns the last element of the list.
-*	@param lst The beginning of the list.
+*	@param list The beginning of the list.
 *	@return Last element of the list.
 */
-t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstlast(t_list *list);
 
 /*
 *	@brief Adds the element ’new’ at the end of the list.
-*	@param lst The address of a pointer to the first link of a list.
+*	@param list The address of a pointer to the first link of a list.
 *	@param new The address of a pointer to the element to be added to the list.
 *	@return void
 */
-void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **list, t_list *new);
 
 /*
 *	@brief Takes as a parameter an element and frees (with free(3)) the
 *	memory of the element’s content using the function
 *	’del’ given as a parameter and free the element.
 *	The memory of ’next’ must not be freed.
-*	@param lst The element to free.
+*	@param list The element to free.
 *	@param del The address of the function used to delete the content.
 *	@return void
 */
-void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstdelone(t_list *list, void (*del)(void*));
 
 /*
 *	@brief Deletes and frees the given element and every
 *	successor of that element, using the function ’del’ and free(3).
 *	Finally, the pointer to the list must be set to NULL.
-*	@param lst The address of a pointer to an element.
+*	@param list The address of a pointer to an element.
 *	@param del The address of the function used to delete the
 *	content of the element.
 *	@return void
 */
-void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstclear(t_list **list, void (*del)(void *));
 
 /*
-*	@brief Iterates the list ’lst’ and applies the function
+*	@brief Iterates the list ’list’ and applies the function
 *	’f’ to the content of each element.
-*	@param lst The address of a pointer to an element.
+*	@param list The address of a pointer to an element.
 *	@param f The address of the function used to iterate on the list.
 *	@return void
 */
-void	ft_lstiter(t_list *lst, void (*f)(void *));
+void	ft_lstiter(t_list *list, void (*f)(void *));
 
 /*
-*	@brief Iterates the list ’lst’ and applies the function
+*	@brief Iterates the list ’list’ and applies the function
 *	’f’ to the content of each element. Creates a new
 *	list resulting of the successive applications of
 *	the function ’f’. The ’del’ function is used to
 *	delete the content of an element if needed.
-*	@param lst The address of a pointer to an element.
+*	@param list The address of a pointer to an element.
 *	@param f The address of the function used to iterate on the list.
 *	@param del The address of the function used to delete the
 *	content of an element if needed.
 *	@return The new list. NULL if the allocation fails.
 */
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_lstmap(t_list *list, void *(*f)(void *), void (*del)(void *));
 
 /*
 *	@brief Allocates (with malloc(3)) and returns a new string,
