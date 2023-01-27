@@ -28,9 +28,7 @@
 
 - > [ft_strlcat](/ft_strlcat.c) `(size_t	ft_strlcat(char *dst, const char *src, size_t dstsize))` The strlcat() function appends the NUL-terminated string src to the end of dst. It will append at most size - strlen(dst) - 1 bytes, NUL-terminat‐
   > ing the result..
-- > [ft_toupper](/ft_toupper.c) `(int	ft_toupper(int c))` If c is a lowercase letter, toupper() returns its uppercase equivalent, if an uppercase representation exists in the current locale. Otherwise,
-
-       it returns c.
+- > [ft_toupper](/ft_toupper.c) `(int	ft_toupper(int c))` If c is a lowercase letter, toupper() returns its uppercase equivalent, if an uppercase representation exists in the current locale. Otherwise, it returns c.
 
 - > [ft_tolower](/ft_tolower.c) `(int	ft_tolower(int c))` If c is an uppercase letter, tolower() returns its lowercase equivalent, if a lowercase representation exists in the current locale. Otherwise,
        it returns c.
