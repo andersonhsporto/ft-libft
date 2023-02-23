@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/07 16:30:07 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/07 20:23:28 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/02/23 16:50:49 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ t_list	*ft_lstnew(void *content)
 	if (element)
 	{
 		element->content = content;
-		element->next = (0);
+		element->next = NULL;
 		return (element);
 	}
-	return (0);
+	return (NULL);
 }

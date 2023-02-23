@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 16:02:09 by anhigo-s          #+#    #+#             */
-/*   Updated: 2022/04/30 14:35:53 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/02/23 16:47:09 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*str;
-	size_t			i;
 
 	str = s;
-	i = 0;
-	while (i < n)
+	while (n)
 	{
-		str[i] = '\0';
-		i++;
+		str[n - 1] = 0;
+		n--;
 	}
 }

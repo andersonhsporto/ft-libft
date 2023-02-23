@@ -6,13 +6,13 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 14:55:49 by anhigo-s          #+#    #+#             */
-/*   Updated: 2023/01/21 01:07:39 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/02/23 16:58:54 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	jump_spaces(int *number, const char *str);
+static void	jump_spaces(int *number, const char *str);
 
 int	ft_atoi(const char *str)
 {
@@ -41,7 +41,7 @@ int	ft_atoi(const char *str)
 	return (sign * (int)number);
 }
 
-void	jump_spaces(int *number, const char *str)
+static void	jump_spaces(int *number, const char *str)
 {
 	while (ft_isspace(str[*number]))
 		(*number)++;

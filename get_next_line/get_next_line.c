@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 00:39:01 by anhigo-s          #+#    #+#             */
-/*   Updated: 2023/01/21 00:33:40 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/02/23 17:39:54 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*gnl_strjoinfree(char *s1, char *s2)
 	new_string = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	i = 0;
 	a = 0;
-	if (new_string == 0)
-		return (0);
+	if (!new_string)
+		return (NULL);
 	while (s1[i] != '\0')
 	{
 		new_string[i] = s1[i];

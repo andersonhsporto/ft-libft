@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/08 02:26:54 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/19 15:22:02 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/02/23 16:53:36 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ t_list	*ft_lstmap(t_list *head, void *(*f)(void *), void (*del)(void *))
 			last->next = ft_lstnew(newlist);
 			last = last->next;
 			last->content = ((*f)(head->content));
-			last->next = 0;
+			last->next = NULL;
 		}
 		head = head->next;
 	}

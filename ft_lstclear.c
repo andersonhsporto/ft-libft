@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/08 15:30:30 by anhigo-s          #+#    #+#             */
-/*   Updated: 2023/01/21 00:23:46 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/02/23 16:53:11 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ft_lstclear(t_list **list, void (*del)(void *))
 {
-	t_list	*i;
+	t_list	*temp;
 
 	while (*list)
 	{
-		i = (*list)->next;
+		temp = (*list)->next;
 		ft_lstdelone(*list, del);
-		*list = i;
+		*list = temp;
 	}
 	list = 0;
 }
