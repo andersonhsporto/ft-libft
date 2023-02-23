@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 16:25:56 by anhigo-s          #+#    #+#             */
-/*   Updated: 2023/01/21 01:27:45 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/02/23 17:39:24 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,24 @@ static char		*start_out_of_bounds(void);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
+	size_t	index;
 	char	*substr;
 
-	if (s == 0)
-		return (0);
+	if (!s)
+		return (NULL);
 	else if (start > ft_strlen(s))
 		return (start_out_of_bounds());
 	substr = malloc((check(s, start, len)) * sizeof(char));
-	if (substr == 0)
-		return (0);
-	i = 0;
-	while ((len--) && (s[start + i] != '\0') && ((start + i) < ft_strlen(s)))
+	if (!substr)
+		return (NULL);
+	index = 0;
+	while ((len--) && (s[start + index] != '\0') && \
+	((start + index) < ft_strlen(s)))
 	{
-		substr[i] = s[start + i];
-		i++;
+		substr[index] = s[start + index];
+		index++;
 	}
-	substr[i] = '\0';
+	substr[index] = '\0';
 	return (substr);
 }
 
@@ -63,8 +64,8 @@ static char	*start_out_of_bounds(void)
 	char	*substr;
 
 	substr = malloc(sizeof(char));
-	if (substr == 0)
-		return (0);
+	if (!substr)
+		return (NULL);
 	substr[0] = '\0';
 	return (substr);
 }

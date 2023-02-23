@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 01:03:28 by anhigo-s          #+#    #+#             */
-/*   Updated: 2022/05/02 12:10:13 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/02/23 17:25:30 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,13 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*pointer;
 
-	if (count == 0 || size == 0)
-	{
-		return (NULL);
-	}
-	if (is_overflow(count, size))
+	if (count == 0 || size == 0 || is_overflow(count, size))
 	{
 		return (NULL);
 	}
 	pointer = malloc(count * size);
-	if (pointer == 0)
-	{
+	if (!pointer)
 		return (NULL);
-	}
 	return (ft_memset(pointer, 0, (count * size)));
 }
 

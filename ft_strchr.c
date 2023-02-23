@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:07:19 by anhigo-s          #+#    #+#             */
-/*   Updated: 2021/08/06 01:03:43 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/02/23 17:34:16 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -27,5 +27,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (c == '\0')
 		return ((char *)s + i);
-	return (0);
+	return (NULL);
 }
