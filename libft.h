@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2023/01/21 00:52:22 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/02/25 03:46:53 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -497,4 +497,11 @@ char	*ft_strtok(char *input, char d);
 */
 char	*get_next_line(int fd);
 
+/*
+*	@brief concatenates two strings and frees the first one
+*	@param s1 The first string.
+*	@param s2 The second string.
+*	@return The new string. NULL if the allocation fails.
+*/
+char	*gnl_strjoinfree(char *s1, char *s2);
 #endif
