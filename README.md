@@ -108,4 +108,6 @@
 - > [ft_strcmp](/ft_strcmp.c) `(int       ft_strcmp(const char *s1, const char *s2))` Compares the two strings s1 and s2. The locale is not taken into account.
   > The comparison is done using unsigned characters.
 
+- > [ft_strcpy](/ft_strcpy.c) `(char      *ft_strcpy(char *dest, const char *src))` Copies the string src to dest (including the terminating `\0' character).
+
 - Aditional information - [Linux Programmer's Manual](http://man7.org/)
