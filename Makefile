@@ -31,7 +31,7 @@ ft_strtjoin.c ft_strcmp.c ft_isspace.c ft_strtok.c \
 ./get_next_line/get_next_line.c \
 ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 ft_lstadd_back.c ft_lstdelone.c \
-ft_lstclear.c ft_lstiter.c ft_lstmap.c
+ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_strcpy.c
 
 ####################################################################################################
 ########################################## Objects files ###########################################

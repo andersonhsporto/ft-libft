@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 23:22:37 by anhigo-s          #+#    #+#             */
-/*   Updated: 2023/02/25 03:46:53 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2023/03/08 23:24:42 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,15 @@ enum e_sign
 	POSITIVE = 1,
 	NEGATIVE = -1
 };
+
+/*
+* 	@brief The strcpy() function copies the string pointed by
+*	source (including the null character) to the destination.
+*	@param dest The destination string.
+*	@param src The source string.
+*	@return The pointer to the destination string.
+*/
+char	*ft_strcpy(char *dest, const char *src);
 
 /*
 *	@brief Checks for an alphanumeric character; it is equivalent to
