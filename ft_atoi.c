@@ -6,7 +6,7 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 14:55:49 by anhigo-s          #+#    #+#             */
-/*   Updated: 2023/02/23 16:58:54 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2025/01/29 00:02:49 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		number = number * 10 + (str[i] - '0');
+		number = (number << 3) + (number << 1) + (str[i] - '0');
 		i++;
 		if (number > MAX_INT && sign == POSITIVE)
 			return (-1);
