@@ -6,66 +6,31 @@
 /*   By: anhigo-s <anhigo-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 16:25:56 by anhigo-s          #+#    #+#             */
-/*   Updated: 2023/02/23 17:39:24 by anhigo-s         ###   ########.fr       */
+/*   Updated: 2025/10/26 23:10:24 by anhigo-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	check(const char *s, unsigned int start, size_t len);
-static char		*start_out_of_bounds(void);
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	index;
-	char	*substr;
+	size_t	s_len;
+	size_t	sub_len;
+	char	*sub;
 
 	if (!s)
 		return (NULL);
-	else if (start > ft_strlen(s))
-		return (start_out_of_bounds());
-	substr = malloc((check(s, start, len)) * sizeof(char));
-	if (!substr)
-		return (NULL);
-	index = 0;
-	while ((len--) && (s[start + index] != '\0') && \
-	((start + index) < ft_strlen(s)))
-	{
-		substr[index] = s[start + index];
-		index++;
-	}
-	substr[index] = '\0';
-	return (substr);
-}
-
-static size_t	check(const char *s, unsigned int start, size_t len)
-{
-	const size_t	s_len = ft_strlen(s);
-	size_t			size;
-
-	size = 0;
-	if (start > s_len)
-	{
-		size = 1;
-	}
-	else if (start + len > s_len)
-	{
-		size = s_len - start + 1;
-	}
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		return (ft_strdup(""));
+	if (len > s_len - start)
+		sub_len = s_len - start;
 	else
-	{
-		size = len + 1;
-	}
-	return (size);
-}
-
-static char	*start_out_of_bounds(void)
-{
-	char	*substr;
-
-	substr = malloc(sizeof(char));
-	if (!substr)
+		sub_len = len;
+	sub = malloc(sub_len + 1);
+	if (!sub)
 		return (NULL);
-	substr[0] = '\0';
-	return (substr);
+	ft_memcpy(sub, s + start, sub_len);
+	sub[sub_len] = '\0';
+	return (sub);
 }
