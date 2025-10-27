@@ -31,6 +31,7 @@ char	*strjoin_variadic(int count, ...)
 	va_list	args;
 	char	*result;
 	char	*temp;
+	char	*old;
 	int		i;
 
 	va_start(args, count);
@@ -39,7 +40,9 @@ char	*strjoin_variadic(int count, ...)
 	while (i < count)
 	{
 		temp = va_arg(args, char *);
+		old = result;
 		result = ft_strtjoin(result, temp, "");
+		free(old);
 		i++;
 	}
 	va_end(args);
