@@ -25,3 +25,23 @@ char	*ft_strtjoin(char *string0, char *string1, char *string2)
 	temp_string = NULL;
 	return (str);
 }
+
+char	*strjoin_variadic(int count, ...)
+{
+	va_list	args;
+	char	*result;
+	char	*temp;
+	int		i;
+
+	va_start(args, count);
+	result = ft_strdup("");
+	i = 0;
+	while (i < count)
+	{
+		temp = va_arg(args, char *);
+		result = ft_strtjoin(result, temp, "");
+		i++;
+	}
+	va_end(args);
+	return (result);
+}

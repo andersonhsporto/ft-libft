@@ -513,4 +513,10 @@ char	*get_next_line(int fd);
 *	@return The new string. NULL if the allocation fails.
 */
 char	*gnl_strjoinfree(char *s1, char *s2);
+
+/*	@brief concatenates multiple strings
+*	@param count The number of strings to concatenate.
+*	@return The new string. NULL if the allocation fails.
+*/
+char	*strjoin_variadic(int count, ...);
 #endif
