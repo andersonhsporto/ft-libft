@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <errno.h>
 # include <stdarg.h>
+# include <stdint.h>
 
 # define BUFFER_SIZE 100
 # define MAX_INT 2147483647
